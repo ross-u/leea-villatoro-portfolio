@@ -4,12 +4,12 @@ nav {
   top: 0;
   z-index: 999;
   flex-wrap: wrap;
-
   justify-content: space-between;
   align-items: center;
-  padding: 16px 50px;
+  padding: 20px 0px;
   background: #dae6eed2;
   height: 80px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.18);
 }
 
 a {
@@ -28,17 +28,28 @@ footer {
   position: relative;
 }
 
+#nav-logo-wrapper {
+  flex: 2;
+  text-align: center;
+  margin-left: 10px;
+}
+
+#nav-links {
+  display: flex;
+  flex: 4;
+}
+
 #nav-logo {
   height: 60px;
-  position: relative;
   top: 8px;
 }
 
 #nav-links ul {
   width: 100%;
   display: flex;
+  align-self: flex-end;
+  justify-content: space-evenly;
   padding: 10px;
-  align-items: center;
 }
 
 #nav-links li {
@@ -48,8 +59,7 @@ footer {
 
 #nav-links li a {
   font-size: 21px;
-  margin-left: 40px;
-  margin-right: 40px;
+
   color: #3d3d3d;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -59,8 +69,7 @@ footer {
   text-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-#intro,
-#bio {
+#intro {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -71,53 +80,15 @@ footer {
   /* background: transparent; */
 }
 
-#bio {
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0px 30px 0px 30px;
-  justify-content: flex-start;
-  box-sizing: border-box;
-}
-
-#bio h1 {
-  margin-top: 20px;
-  margin-bottom: -100px;
-  margin-left: 100px;
-  width: 50%;
-}
-
-#bio .project-content-box.content-wrapper {
-  padding: 0px 20px;
-  flex: 4;
-  justify-content: space-between;
-}
-
-.project-content-box.image-wrapper {
-  flex: 2;
-}
-
-.project-content-box img {
-  height: auto;
-  width: 100%;
-  overflow: hidden;
-  margin-top: -200px;
-}
-
-#bio .project-content-box {
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
 #bg-slider {
+  width: 100vw;
   background: url("./../assets/background-slider.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top 200px;
   top: 110px;
+  right: 0;
   position: fixed;
+  overflow: hidden;
 }
 
 #transparent-slide {
@@ -151,7 +122,6 @@ footer {
 }
 
 #resume-section {
-  margin-top: -50px;
   width: 100vw;
   height: 20vh;
   text-align: center;
@@ -161,7 +131,7 @@ footer {
 #contact-section button,
 #resume-section button {
   font-size: 24px;
-  padding: 20px 80px;
+  padding: 20px 60px;
   border: 1px solid black;
   border-radius: 5px;
   font-family: "Open Sans", sans-serif;
@@ -180,6 +150,41 @@ footer {
 #inline-img {
   display: inline;
   width: 20px;
+}
+
+#bio {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #fdfdfd;
+}
+
+#resume-content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#resume-text-wrapper,
+#resume-image-wrapper {
+  min-width: 320px;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+#resume-text-wrapper {
+  flex: 4;
+}
+
+#resume-image-wrapper {
+  flex: 2;
+  text-align: center;
+}
+#resume-image-wrapper img {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
 }
 
 section#social-media {
@@ -204,6 +209,14 @@ section a {
 
 .header-center-lg {
   font-size: 60px;
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: 24px;
+  letter-spacing: 7px;
+  text-align: center;
+}
+
+.header-center-md {
+  font-size: 40px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 24px;
   letter-spacing: 7px;
@@ -272,8 +285,10 @@ section a {
   align-items: center;
 }
 
-.header-wrapper {
+#header-wrapper {
   width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .bio-description {
@@ -282,6 +297,8 @@ section a {
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
   color: #3f3f3f;
+  background: #fdfdfd;
+
   letter-spacing: 0.1px;
   line-height: 26px;
   word-wrap: break-word;
@@ -329,4 +346,45 @@ img#mockup-perdue-img {
   -ms-transform: rotate(-10deg); /* IE 9 */
   -webkit-transform: rotate(-10deg); /* Safari 3-8 */
   transform: rotate(-10deg);
+}
+
+@media (max-width: 375px) {
+  nav {
+    height: auto;
+    padding-bottom: 0px;
+  }
+  #nav-logo-wrapper {
+    width: 320px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  #nav-links {
+    justify-content: center;
+  }
+  #nav-links ul {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  #nav-links ul li {
+    width: 100%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+  }
+  #header-wrapper h1 {
+    font-size: 40px;
+  }
+
+  #resume-text-wrapper {
+    padding-bottom: 0px;
+  }
+
+  p.bio-description {
+    font-size: 16px;
+  }
 }
