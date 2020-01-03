@@ -28,7 +28,12 @@
         <img id="nav-logo" src="./assets/LV Logo.png" alt="" />
       </section>
       <section id="nav-links">
-        <ul>
+        <ul id="open-button-wrapper">
+          <li class="navbar-menu-btn">
+            <p id="nav-menu-open">MENU</p>
+          </li>
+        </ul>
+        <ul id="nav-menu">
           <li>
             <a class="gray1 cursive" href="/">HOME</a>
           </li>
@@ -38,13 +43,18 @@
           <li>
             <a class="gray1 cursive" href="/about.html">ABOUT</a>
           </li>
+          <li class="navbar-menu-btn">
+            <p id="nav-menu-close">^</p>
+          </li>
         </ul>
       </section>
     </nav>
     <section class="container" id="intro">
-      <h1 class="header-center-lg gray2 semi-bold">LEEA VILLATORO</h1>
-      <h1 class="header-center-lg gray2 bold">USER EXPERIENCE DESIGNER</h1>
-      <h3 class="header-center-sm gray2 bold">BASED IN SAN FRANCISCO</h3>
+      <header>
+        <h1 class="header-center-lg gray2 semi-bold">LEEA VILLATORO</h1>
+        <h1 class="header-center-lg gray2 bold">UX / UI DESIGNER</h1>
+        <h3 class="header-center-sm gray2 bold">BASED IN SAN FRANCISCO</h3>
+      </header>
     </section>
     <div class="container" id="transparent-slide">
       <img src="./assets//lv_logo_sq_lg.png" alt="" />
@@ -55,10 +65,10 @@
       <section class="container" id="editorial">
         <div class="project-content-box empty-half"></div>
         <div class="project-content-box">
-          <a href="">
+          <a href="ttps://medium.com/@leea.cirkovic">
             <h2 class="project-headline cursive gray2">TU ESTILO</h2>
           </a>
-          <a href="">
+          <a href="ttps://medium.com/@leea.cirkovic">
             <img
               id="mockup-editorial-img"
               src="./assets/mockup-editorial.svg"
@@ -70,7 +80,9 @@
 
       <section class="container" id="ecommerce">
         <div class="project-content-box" id="frame-art-headline-wrapper">
-          <a href="">
+          <a
+            href="https://medium.com/@leea.cirkovic/e-commerce-case-study-f0e26a8a43fa"
+          >
             <h2 class="project-headline cursive gray2">FRAME ART INC.</h2>
           </a>
 
@@ -90,10 +102,10 @@
         <div class="project-content-box empty-half"></div>
 
         <div class="project-content-box">
-          <a href="">
+          <a href="ttps://medium.com/@leea.cirkovic">
             <h2 class="project-headline cursive gray2">PERDUE RECIPES</h2>
           </a>
-          <a href="">
+          <a href="ttps://medium.com/@leea.cirkovic">
             <img
               id="mockup-perdue-img"
               src="./assets/mockup-perdue.svg"
@@ -115,5 +127,6 @@
         By Leea Villatoro Ⓒ 2019. All Rights Reserved.
       </h4>
     </footer>
+    <script src="./src/index.js"></script>
   </body>
 </html>
