@@ -89,7 +89,7 @@ footer {
 
 #intro header {
   text-align: center;
-  margin-top: -160px;
+  margin-top: -180px;
 }
 
 #bg-slider {
@@ -443,6 +443,7 @@ img#mockup-perdue-img {
   }
 
   #resume-text-wrapper {
+    padding-top: 130px;
     padding-bottom: 0px;
   }
 
